@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Talentrack - India's First AI Content Marketplace. Scale authentic brand campaigns with licensed AI talent and synthetic avatars.">
+    <meta name="theme-color" content="#0052cc">
+    <title>Talentrack | India's First AI Content Marketplace</title>
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Swiper 11 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+
+    <!-- Custom Modern Stylesheet with Clamp & CSS Variables -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- ====================================================================
+         SITE HEADER & NAVIGATION
+         ==================================================================== -->
+    <header class="site-header" role="banner">
+        <div class="site-container">
+            <nav class="nav-wrapper" aria-label="Main Navigation">
+                <!-- Brand Logo -->
+                <a href="#hero" class="brand-logo-link" aria-label="Talentrack Home">
+                    <img src="./assets/images/logo.svg" alt="Talentrack Logo" class="brand-logo" width="255"
+                        height="44">
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="desktop-nav">
+                    <ul class="nav-list">
+                        <li class="dropdown dropdown-item-hover">
+                            <a href="#services" class="nav-link-custom" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services
+                                <svg class="nav-caret" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    aria-hidden="true">
+                                    <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu nav-dropdown-menu">
+                                <li><a class="dropdown-item" href="#use-cases">AI Content Creation</a></li>
+                                <li><a class="dropdown-item" href="#talent">Licensed Digital Avatars</a></li>
+                                <li><a class="dropdown-item" href="#compliance">Enterprise Compliance</a></li>
+                                <li><a class="dropdown-item" href="#use-cases">Performance Video Ads</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav-link-custom">Our Work</a>
+                        </li>
+                        <li class="dropdown dropdown-item-hover">
+                            <a href="#talent" class="nav-link-custom" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Browse Creators
+                                <svg class="nav-caret" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    aria-hidden="true">
+                                    <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu nav-dropdown-menu">
+                                <li><a class="dropdown-item" href="#talent">Trending AI Talent</a></li>
+                                <li><a class="dropdown-item" href="#talent">Fashion & Lifestyle</a></li>
+                                <li><a class="dropdown-item" href="#talent">Actors & Influencers</a></li>
+                                <li><a class="dropdown-item" href="#talent">Voice & Presenters</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="header-cta-btn">
+                        <span class="header-cta-inner">Casting</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Hamburger Toggler -->
+                <button class="mobile-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                    aria-controls="mobileMenu" aria-label="Toggle navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====================================================================
+         BOOTSTRAP OFFCANVAS (MOBILE NAVIGATION DRAWER)
+         ==================================================================== -->
+    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <div id="mobileMenuLabel">
+                <img src="./assets/images/logo.svg" alt="Talentrack Logo" height="28">
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li>
+                    <a href="#hero" class="mobile-nav-link" data-bs-dismiss="offcanvas">Home</a>
+                </li>
+                <!-- Services Accordion Item -->
+                <li class="mobile-nav-item">
+                    <div class="mobile-accordion-group">
+                        <button class="mobile-nav-link mobile-accordion-toggle collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#mobileServicesMenu" aria-expanded="false"
+                            aria-controls="mobileServicesMenu">
+                            <span>Services</span>
+                            <span class="accordion-icon-box" aria-hidden="true">
+                                <svg class="icon-plus" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                <svg class="icon-minus" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="collapse mobile-accordion-collapse" id="mobileServicesMenu">
+                            <ul class="mobile-subnav-list">
+                                <li><a class="mobile-subnav-link" href="#use-cases" data-bs-dismiss="offcanvas">AI Content Creation</a></li>
+                                <li><a class="mobile-subnav-link" href="#talent" data-bs-dismiss="offcanvas">Licensed Digital Avatars</a></li>
+                                <li><a class="mobile-subnav-link" href="#compliance" data-bs-dismiss="offcanvas">Enterprise Compliance</a></li>
+                                <li><a class="mobile-subnav-link" href="#use-cases" data-bs-dismiss="offcanvas">Performance Video Ads</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#about" class="mobile-nav-link" data-bs-dismiss="offcanvas">Our Work</a>
+                </li>
+                <!-- Browse Creators Accordion Item -->
+                <li class="mobile-nav-item">
+                    <div class="mobile-accordion-group">
+                        <button class="mobile-nav-link mobile-accordion-toggle collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#mobileCreatorsMenu" aria-expanded="false"
+                            aria-controls="mobileCreatorsMenu">
+                            <span>Browse Creators</span>
+                            <span class="accordion-icon-box" aria-hidden="true">
+                                <svg class="icon-plus" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                <svg class="icon-minus" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="collapse mobile-accordion-collapse" id="mobileCreatorsMenu">
+                            <ul class="mobile-subnav-list">
+                                <li><a class="mobile-subnav-link" href="#talent" data-bs-dismiss="offcanvas">Trending AI Talent</a></li>
+                                <li><a class="mobile-subnav-link" href="#talent" data-bs-dismiss="offcanvas">Fashion & Lifestyle</a></li>
+                                <li><a class="mobile-subnav-link" href="#talent" data-bs-dismiss="offcanvas">Actors & Influencers</a></li>
+                                <li><a class="mobile-subnav-link" href="#talent" data-bs-dismiss="offcanvas">Voice & Presenters</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#use-cases" class="mobile-nav-link" data-bs-dismiss="offcanvas">Explore Use Cases</a>
+                </li>
+                <li>
+                    <a href="#compliance" class="mobile-nav-link" data-bs-dismiss="offcanvas">Enterprise Compliance</a>
+                </li>
+            </ul>
+
+            <div class="pt-4 border-top">
+                <a href="#cta" class="btn-pill btn-primary-pill w-100 text-center text-decoration-none d-block"
+                    data-bs-dismiss="offcanvas">
+                    Request a Proposal
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================================
+         MAIN CONTENT AREA
+         ==================================================================== -->
+    <main id="main-content">
+
+        <!-- ----------------------------------------------------------------
+             HERO SECTION
+             ---------------------------------------------------------------- -->
+        <section class="hero-outer-container" id="hero" aria-label="Hero Showcase">
+            <div class="site-container">
+                <div class="hero-card">
+                    <!-- Background Visual Asset -->
+                    <img src="./assets/images/hero-baanner.jpg" alt="AI Content Creator Studio and Talent"
+                        class="hero-bg-layer" fetchpriority="high">
+
+                    <!-- Dark Gradient Overlay for Contrast -->
+                    <div class="hero-overlay" aria-hidden="true"></div>
+
+                    <!-- Hero Copy & Action -->
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            India's First<span class="d-none d-md-inline"><br></span> AI Content<br>
+                            Marketplace
+                        </h1>
+                        <p class="hero-description">
+                            Create campaign-ready videos and visual content at speed and scale, powered by AI production
+                            and licensed AI talent.
+                        </p>
+                        <a href="#cta" class="btn-pill btn-white-pill text-decoration-none">
+                            Request a Proposal
+                        </a>
+                    </div>
+
+                    <!-- Scroll Down Mouse Indicator -->
+                    <a href="#about" class="hero-scroll-indicator" aria-label="Scroll down to learn more">
+                        <div class="mouse-icon">
+                            <div class="mouse-wheel"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------
+             VALUE PROPOSITION / HEADLINE SECTION
+             ---------------------------------------------------------------- -->
+        <section class="value-prop-section section-spacing" id="about" aria-label="Value Proposition">
+            <div class="site-container">
+                <div class="value-prop-inner">
+                    <h2 class="value-prop-title">
+                        The Speed and Scale of AI.<br>
+                        The Authenticity of<br>
+                        Real Talent.
+                    </h2>
+                    <p class="value-prop-desc">
+                        Power your digital campaigns with AI-led production and licensed AI talent to create
+                        high-quality content faster and at scale, without losing the human connection.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------
+             EXPLORE USE CASES SECTION
+             ---------------------------------------------------------------- -->
+        <section class="use-cases-section section-spacing-bottom" id="use-cases" aria-label="Explore Use Cases">
+            <div class="site-container">
+                <h3 class="use-cases-title">Explore Use Cases</h3>
+                <!-- Filter Pills Navigation (Bootstrap Nav Pills) -->
+                <div class="use-cases-pills-wrapper">
+                            <ul class="nav nav-pills use-cases-pills" id="useCasesTabs" role="tablist" aria-label="Use Case Categories">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill active" id="tab-ad-films" data-bs-toggle="pill" data-bs-target="#pane-ad-films" type="button" role="tab" aria-controls="pane-ad-films" aria-selected="true">Ad Films</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill" id="tab-social-media" data-bs-toggle="pill" data-bs-target="#pane-social-media" type="button" role="tab" aria-controls="pane-social-media" aria-selected="false">Social Media Content</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill" id="tab-influencer" data-bs-toggle="pill" data-bs-target="#pane-influencer" type="button" role="tab" aria-controls="pane-influencer" aria-selected="false">Influencer Campaigns</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill" id="tab-ecommerce" data-bs-toggle="pill" data-bs-target="#pane-ecommerce" type="button" role="tab" aria-controls="pane-ecommerce" aria-selected="false">E-commerce Catalogs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill" id="tab-branded" data-bs-toggle="pill" data-bs-target="#pane-branded" type="button" role="tab" aria-controls="pane-branded" aria-selected="false">Branded Content</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill" id="tab-explainer" data-bs-toggle="pill" data-bs-target="#pane-explainer" type="button" role="tab" aria-controls="pane-explainer" aria-selected="false">Explainer Videos</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link filter-pill" id="tab-virtual-presenters" data-bs-toggle="pill" data-bs-target="#pane-virtual-presenters" type="button" role="tab" aria-controls="pane-virtual-presenters" aria-selected="false">Virtual Presenters</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Showcase Big Image Card (Bootstrap Tab Content) -->
+                        <div class="tab-content" id="useCasesTabContent">
+                            <div class="tab-pane fade show active" id="pane-ad-films" role="tabpanel" aria-labelledby="tab-ad-films" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="./assets/images/walking.jpg" alt="Ad Films AI Campaign" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade" id="pane-social-media" role="tabpanel" aria-labelledby="tab-social-media" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop&q=80" alt="Social Media Content AI Campaign" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade" id="pane-influencer" role="tabpanel" aria-labelledby="tab-influencer" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200&auto=format&fit=crop&q=80" alt="Influencer Campaigns AI Production" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade" id="pane-ecommerce" role="tabpanel" aria-labelledby="tab-ecommerce" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=80" alt="E-commerce Catalogs AI Visuals" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade" id="pane-branded" role="tabpanel" aria-labelledby="tab-branded" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop&q=80" alt="Branded Content AI Production" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade" id="pane-explainer" role="tabpanel" aria-labelledby="tab-explainer" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&auto=format&fit=crop&q=80" alt="Explainer Videos AI Production" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="tab-pane fade" id="pane-virtual-presenters" role="tabpanel" aria-labelledby="tab-virtual-presenters" tabindex="0">
+                                <figure class="showcase-card m-0">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&auto=format&fit=crop&q=80" alt="Virtual Presenters AI Production" class="showcase-image" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    <p class="showcase-mobile-caption">
+                        Generate AI-assisted commercial creatives featuring consented digital talent.
+                    </p>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------
+             REAL HUMAN IDENTITIES TALENT SECTION (SLIDER CAROUSEL)
+             ---------------------------------------------------------------- -->
+        <section class="talent-section section-spacing-bottom" id="talent" aria-label="Licensed AI Talent">
+            <div class="site-container">
+                <!-- Section Header with Controls -->
+                <div class="talent-header-row">
+                    <div>
+                        <h3 class="talent-title">AI Content Needs Real Human Identities</h3>
+                        <p class="talent-subtitle mb-0">
+                            Scale authentic engagement with diverse AI influencers and licensed synthetic human avatars
+                            designed for commercial production.
+                        </p>
+                    </div>
+                    <div class="talent-controls">
+                        <button type="button" class="btn-circle-nav" id="talentPrevBtn"
+                            aria-label="Previous talent cards">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn-circle-nav" id="talentNextBtn" aria-label="Next talent cards">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                        <a href="#talent" class="view-all-link">View All</a>
+                    </div>
+                </div>
+
+                <!-- Talent Cards Swiper Slider -->
+                <div class="swiper talent-swiper" id="talentSwiper">
+                    <div class="swiper-wrapper talent-slider-track" id="talentSliderTrack">
+
+                        <!-- Card 1: Daksh Chopra -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/daksh-chopra.jpg" alt="Daksh Chopra" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Daksh Chopra</h4>
+                                    <p class="talent-role mb-0">Influencer, Actor</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 2: Sheen Rawat -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/sheen-rawat.jpg" alt="Sheen Rawat" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Sheen Rawat</h4>
+                                    <p class="talent-role mb-0">Fashion, Actor</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 3: Syscila Sampath -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/syscila-sampath.jpg" alt="Syscila Sampath" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Syscila Sampath</h4>
+                                    <p class="talent-role mb-0">Model, Influencer</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 4: Salman Shaikh -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/salman-shaikh.jpg" alt="Salman Shaikh" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Salman Shaikh</h4>
+                                    <p class="talent-role mb-0">Fitness, Model</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 5: Misty -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/misty.jpg" alt="Misty" class="talent-card-img" loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Misty</h4>
+                                    <p class="talent-role mb-0">Lifestyle, Actor</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 6: Arshi Srivastava -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/arshi-srivastava.jpg" alt="Arshi Srivastava" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Arshi Srivastava</h4>
+                                    <p class="talent-role mb-0">Actor, Digital Creator</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 7: Daksh Chopra (Loop Set) -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/daksh-chopra.jpg" alt="Daksh Chopra" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Daksh Chopra</h4>
+                                    <p class="talent-role mb-0">Influencer, Actor</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 8: Sheen Rawat (Loop Set) -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/sheen-rawat.jpg" alt="Sheen Rawat" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Sheen Rawat</h4>
+                                    <p class="talent-role mb-0">Fashion, Actor</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 9: Syscila Sampath (Loop Set) -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/syscila-sampath.jpg" alt="Syscila Sampath" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Syscila Sampath</h4>
+                                    <p class="talent-role mb-0">Model, Influencer</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 10: Salman Shaikh (Loop Set) -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/salman-shaikh.jpg" alt="Salman Shaikh" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Salman Shaikh</h4>
+                                    <p class="talent-role mb-0">Fitness, Model</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 11: Misty (Loop Set) -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/misty.jpg" alt="Misty" class="talent-card-img" loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Misty</h4>
+                                    <p class="talent-role mb-0">Lifestyle, Actor</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Card 12: Arshi Srivastava (Loop Set) -->
+                        <div class="swiper-slide">
+                            <article class="talent-card">
+                                <img src="./assets/images/arshi-srivastava.jpg" alt="Arshi Srivastava" class="talent-card-img"
+                                    loading="lazy">
+                                <div class="talent-card-overlay">
+                                    <h4 class="talent-name">Arshi Srivastava</h4>
+                                    <p class="talent-role mb-0">Actor, Digital Creator</p>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------
+             BUILT FOR ENTERPRISE COMPLIANCE SECTION
+             ---------------------------------------------------------------- -->
+        <section class="compliance-section section-spacing-bottom" id="compliance" aria-label="Enterprise Compliance">
+            <div class="site-container">
+                <h3 class="compliance-title">Built for Enterprise Compliance</h3>
+
+                <div class="compliance-stage">
+                    <!-- Concentric Rings & AI Core Background Graphic -->
+                    <div class="compliance-bg-wrapper">
+                        <img src="./assets/images/compliance-bg.svg" alt="Enterprise Compliance Orbital Background"
+                            class="compliance-bg-graphic" loading="lazy" width="584" height="584">
+                    </div>
+
+                    <!-- Compliance Feature Cards -->
+                    <!-- Card 1: Top (12 o'clock) -->
+                    <div class="compliance-card compliance-card-top">
+                        <div class="compliance-card-icon" aria-hidden="true">
+                            <!-- SVG icon placeholder (paste your custom SVG icon here) -->
+                            <svg width="34" height="42" viewBox="0 0 34 42" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21 1V9C21 10.0609 21.4214 11.0783 22.1716 11.8284C22.9217 12.5786 23.9391 13 25 13H33M11 27L15 31L23 23M23 1H5C3.93913 1 2.92172 1.42143 2.17157 2.17157C1.42143 2.92172 1 3.93913 1 5V37C1 38.0609 1.42143 39.0783 2.17157 39.8284C2.92172 40.5786 3.93913 41 5 41H29C30.0609 41 31.0783 40.5786 31.8284 39.8284C32.5786 39.0783 33 38.0609 33 37V11L23 1Z"
+                                    stroke="url(#paint0_linear_4973_290)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4973_290" x1="1.55652" y1="5" x2="33.4255"
+                                        y2="5.67301" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <p class="compliance-card-text">Explicit AI likeness and digital replica consent</p>
+                    </div>
+
+                    <!-- Card 2: Top Left (10 o'clock) -->
+                    <div class="compliance-card compliance-card-top-left">
+                        <div class="compliance-card-icon" aria-hidden="true">
+                            <svg width="34" height="42" viewBox="0 0 34 42" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M33 23.0009C33 33.0009 26 38.0009 17.68 40.9009C17.2443 41.0485 16.7711 41.0415 16.34 40.8809C8 38.0009 1 33.0009 1 23.0009V9.0009C1 8.47047 1.21071 7.96176 1.58579 7.58669C1.96086 7.21161 2.46957 7.0009 3 7.0009C7 7.0009 12 4.6009 15.48 1.5609C15.9037 1.1989 16.4427 1 17 1C17.5573 1 18.0963 1.1989 18.52 1.5609C22.02 4.6209 27 7.0009 31 7.0009C31.5304 7.0009 32.0391 7.21161 32.4142 7.58669C32.7893 7.96176 33 8.47047 33 9.0009V23.0009Z"
+                                    stroke="url(#paint0_linear_1_2965)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M15.6714 10.5625C15.3248 10.8108 15.0666 11.1633 14.9345 11.5686L13.4345 14.5206C13.291 14.8029 13.0826 15.0471 12.8264 15.2331C12.5701 15.4191 12.2733 15.5417 11.9605 15.5906L8.69449 16.1026C8.26786 16.1015 7.85208 16.2369 7.50787 16.4889C7.16366 16.741 6.90906 17.0965 6.78128 17.5035C6.65349 17.9106 6.65921 18.3478 6.7976 18.7514C6.93599 19.1549 7.1998 19.5036 7.55049 19.7466L9.86249 22.0506C10.0872 22.2742 10.2555 22.5481 10.3536 22.8496C10.4517 23.1511 10.4766 23.4715 10.4265 23.7846L9.91049 27.0106C9.76985 27.4142 9.76222 27.8523 9.88872 28.2606C10.0152 28.6689 10.2692 29.0259 10.6134 29.2793C10.9576 29.5327 11.374 29.6691 11.8014 29.6687C12.2288 29.6682 12.6449 29.5308 12.9885 29.2766L15.9185 27.7766C16.2007 27.632 16.5133 27.5565 16.8305 27.5565C17.1476 27.5565 17.4602 27.632 17.7425 27.7766L20.6725 29.2766C21.0161 29.5329 21.4331 29.672 21.8618 29.6734C22.2905 29.6748 22.7083 29.5383 23.0536 29.2842C23.3989 29.0301 23.6534 28.6718 23.7796 28.2621C23.9058 27.8524 23.897 27.4129 23.7545 27.0086L23.2365 23.7826C23.1867 23.4699 23.2118 23.1498 23.3099 22.8487C23.4079 22.5475 23.5761 22.274 23.8005 22.0506L26.1445 19.7146C26.4837 19.4655 26.7356 19.1158 26.8645 18.7152C26.9934 18.3146 26.9927 17.8835 26.8624 17.4834C26.7321 17.0833 26.479 16.7344 26.1389 16.4865C25.7989 16.2386 25.3893 16.1042 24.9685 16.1026L21.7005 15.5906C21.3876 15.5417 21.0909 15.4191 20.8346 15.2331C20.5784 15.0471 20.3699 14.8029 20.2265 14.5206L18.7525 11.6166C18.6306 11.2081 18.3813 10.8492 18.0411 10.5923C17.7008 10.3354 17.2874 10.194 16.8611 10.1886C16.4349 10.1833 16.018 10.3143 15.6714 10.5625Z"
+                                    stroke="url(#paint1_linear_1_2965)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_2965" x1="1.55652" y1="5.00067" x2="33.4255"
+                                        y2="5.67357" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_1_2965" x1="1.55652" y1="5.00067" x2="33.4255"
+                                        y2="5.67357" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <p class="compliance-card-text">Reduced legal, copyright, and deepfake risks</p>
+                    </div>
+
+                    <!-- Card 3: Top Right (2 o'clock) -->
+                    <div class="compliance-card compliance-card-top-right">
+                        <div class="compliance-card-icon" aria-hidden="true">
+                            <svg width="40" height="38" viewBox="0 0 40 38" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 1V35C19 35.5304 18.7893 36.0391 18.4142 36.4142C18.0391 36.7893 17.5304 37 17 37H5C3.93913 37 2.92172 36.5786 2.17157 35.8284C1.42143 35.0783 1 34.0609 1 33V5C1 3.93913 1.42143 2.92172 2.17157 2.17157C2.92172 1.42143 3.93913 1 5 1H33C34.0609 1 35.0783 1.42143 35.8284 2.17157C36.5786 2.92172 37 3.93913 37 5V17C37 17.5304 36.7893 18.0391 36.4142 18.4142C36.0391 18.7893 35.5304 19 35 19H1M27 33L31 37L39 29"
+                                    stroke="url(#paint0_linear_4973_172)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4973_172" x1="1.66087" y1="4.6" x2="39.4928"
+                                        y2="5.65415" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <p class="compliance-card-text">Verified identity and documented chain of ownership</p>
+                    </div>
+
+                    <!-- Card 4: Bottom Left (8 o'clock) -->
+                    <div class="compliance-card compliance-card-bottom-left">
+                        <div class="compliance-card-icon" aria-hidden="true">
+                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21 1C24.8803 0.999293 28.677 2.12736 31.9274 4.24671C35.1777 6.36607 37.7414 9.38518 39.3059 12.9361C40.8704 16.487 41.3682 20.4163 40.7386 24.2452C40.109 28.074 38.3792 31.6371 35.76 34.5M21 9V21L29 25M2 14.75C1.3627 16.6873 1.02547 18.7107 1 20.75M2.65991 29C3.78291 31.5837 5.43908 33.9009 7.51991 35.8M6.27197 7.46986C6.83005 6.86232 7.42519 6.28989 8.05397 5.75586M14.2881 39.8401C19.2755 41.6168 24.7639 41.3435 29.5501 39.0801"
+                                    stroke="url(#paint0_linear_4973_173)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4973_173" x1="1.69572" y1="4.99999" x2="41.5256"
+                                        y2="6.0515" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <p class="compliance-card-text">Defined campaign usage and duration controls</p>
+                    </div>
+
+                    <!-- Card 5: Bottom Right (4 o'clock) -->
+                    <div class="compliance-card compliance-card-bottom-right">
+                        <div class="compliance-card-icon" aria-hidden="true">
+                            <svg width="43" height="42" viewBox="0 0 43 42" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.022 12.9902H29.022M13.022 20.9902H29.022M23.022 30.9902L13.022 28.9902H15.022C17.1437 28.9902 19.1785 28.1474 20.6788 26.6471C22.1791 25.1468 23.022 23.112 23.022 20.9902C23.022 18.8685 22.1791 16.8337 20.6788 15.3334C19.1785 13.8331 17.1437 12.9902 15.022 12.9902M4.72187 14.2304C4.42995 12.9155 4.47478 11.5481 4.85218 10.2551C5.22959 8.9621 5.92737 7.78532 6.88081 6.83387C7.83425 5.88243 9.01249 5.18712 10.3063 4.81242C11.6001 4.43772 12.9675 4.39576 14.2819 4.69043C15.0053 3.55903 16.0019 2.62795 17.1798 1.983C18.3577 1.33805 19.679 1 21.0219 1C22.3648 1 23.6861 1.33805 24.864 1.983C26.0419 2.62795 27.0385 3.55903 27.7619 4.69043C29.0782 4.39448 30.448 4.43625 31.7439 4.81186C33.0397 5.18747 34.2195 5.88471 35.1736 6.83874C36.1276 7.79276 36.8248 8.97258 37.2004 10.2684C37.5761 11.5643 37.6178 12.9341 37.3219 14.2504C38.4533 14.9738 39.3844 15.9704 40.0293 17.1483C40.6742 18.3262 41.0123 19.6475 41.0123 20.9904C41.0123 22.3333 40.6742 23.6546 40.0293 24.8325C39.3844 26.0104 38.4533 27.007 37.3219 27.7304C37.6165 29.0448 37.5746 30.4122 37.1999 31.706C36.8252 32.9998 36.1299 34.1781 35.1784 35.1315C34.227 36.0849 33.0502 36.7827 31.7572 37.1601C30.4642 37.5375 29.0968 37.5823 27.7819 37.2904C27.0594 38.4262 26.062 39.3612 24.8821 40.0091C23.7022 40.6569 22.3779 40.9965 21.0319 40.9965C19.6858 40.9965 18.3615 40.6569 17.1816 40.0091C16.0017 39.3612 15.0043 38.4262 14.2819 37.2904C12.9675 37.5851 11.6001 37.5431 10.3063 37.1684C9.01249 36.7937 7.83425 36.0984 6.88081 35.147C5.92737 34.1955 5.22959 33.0188 4.85218 31.7257C4.47478 30.4327 4.42995 29.0654 4.72187 27.7504C3.58178 27.0289 2.6427 26.0308 1.99197 24.8489C1.34124 23.6669 1 22.3396 1 20.9904C1 19.6412 1.34124 18.3139 1.99197 17.132C2.6427 15.9501 3.58178 14.9519 4.72187 14.2304Z"
+                                    stroke="url(#paint0_linear_4973_291)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4973_291" x1="1.69587" y1="4.99965" x2="41.5344"
+                                        y2="6.05171" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <p class="compliance-card-text">Commercial usage permissions</p>
+                    </div>
+
+                    <!-- Card 6: Bottom (6 o'clock) -->
+                    <div class="compliance-card compliance-card-bottom">
+                        <div class="compliance-card-icon" aria-hidden="true">
+                            <svg width="34" height="42" viewBox="0 0 34 42" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 21.001L15 25.001L23 17.001M33 23.0009C33 33.0009 26 38.0009 17.68 40.9009C17.2443 41.0485 16.7711 41.0415 16.34 40.8809C8 38.0009 1 33.0009 1 23.0009V9.0009C1 8.47047 1.21071 7.96176 1.58579 7.58669C1.96086 7.21161 2.46957 7.0009 3 7.0009C7 7.0009 12 4.6009 15.48 1.5609C15.9037 1.1989 16.4427 1 17 1C17.5573 1 18.0963 1.1989 18.52 1.5609C22.02 4.6209 27 7.0009 31 7.0009C31.5304 7.0009 32.0391 7.21161 32.4142 7.58669C32.7893 7.96176 33 8.47047 33 9.0009V23.0009Z"
+                                    stroke="url(#paint0_linear_4973_85)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4973_85" x1="1.55652" y1="5.00067" x2="33.4255"
+                                        y2="5.67357" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#034BB8" />
+                                        <stop offset="0.25" stop-color="#8A38F5" />
+                                        <stop offset="0.504808" stop-color="#E32A7D" />
+                                        <stop offset="0.754808" stop-color="#E8542F" />
+                                        <stop offset="1" stop-color="#FFC053" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <p class="compliance-card-text">Brand safety and content approval mechanisms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------------------------
+             CALL TO ACTION (CTA) BANNER
+             ---------------------------------------------------------------- -->
+        <section class="cta-banner-wrapper section-spacing-bottom" id="cta" aria-label="Call to Action">
+            <div class="site-container">
+                <div class="cta-banner">
+                    <h3 class="cta-heading">Ready to Build Your Next AI-Powered Content?</h3>
+                    <a href="mailto:contact@talentrack.in" class="cta-btn-white text-decoration-none">
+                        Request a Proposal
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <polyline points="5 11 12 4 19 11"></polyline>
+        </svg>
+    </button>
+
+    <!-- Bootstrap 5.3.3 Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper 11 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Lenis Smooth Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Custom Main JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1095,13 +1095,23 @@ h6 {
     position: relative;
     width: 100%;
     aspect-ratio: 1416 / 641;
-    min-height: 440px;
-    max-height: 600px;
+    height: clamp(260px, 35vw, 520px);
+    min-height: unset;
+    max-height: unset;
     border-radius: var(--radius-hero);
     overflow: hidden;
     box-shadow: var(--shadow-card);
     background-color: #f1f4f8;
     transition: transform var(--transition-base);
+}
+
+/* Lock tab-content height so different images never push layout */
+#useCasesTabContent {
+    position: relative;
+}
+
+#useCasesTabContent .tab-pane {
+    /* Take full height of the parent; inactive panes collapse via Bootstrap fade */
 }
 
 .showcase-card:hover {
@@ -1180,7 +1190,9 @@ h6 {
     .showcase-card {
         border-radius: 20px;
         aspect-ratio: 16 / 9;
-        max-height: 240px;
+        height: clamp(180px, 52vw, 240px);
+        min-height: unset;
+        max-height: unset;
     }
 
     .showcase-mobile-caption {
